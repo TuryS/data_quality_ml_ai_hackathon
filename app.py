@@ -14,7 +14,7 @@ client = OpenAI(
     )
 
 
-from preprocessing import load_data, add_derived_fields, basic_validation_flags
+from preprocessing import run_pipeline
 from metrics import kpi_summary, compute_quality_score, delay_by_carrier, kpis_per_carrier
 from model import load_model, predict_delay
 from ui_tags import build_color_map, inject_multiselect_tag_css
@@ -45,10 +45,13 @@ def metric_card(title, value, color="#222", bg="#f8f9fa"):
 def get_model():
     return load_model("artifacts/delay_model.pkl")
 
+@st.cache_data
+def load_and_process_data():
+    """Load and process data with MasterCarrier mapping."""
+    return run_pipeline("data/shipments_with_master_carrier.csv")
+
 # Load + prepare
-df = load_data("data/shipments_with_master_carrier.csv")
-df = add_derived_fields(df)
-df = basic_validation_flags(df)
+df = load_and_process_data()
 
 
 # Derive current carrier set from MasterCarrier
@@ -157,16 +160,16 @@ if user_input:
         "kpis_by_carrier": kpis_per_carrier(df_f),  # detailed deviations
     }
 
-
     prompt = f"""
-    You are explaining logistic freight performance metrics.
+    You are a professional AI assistant specialized in maritime freight logistics. Respond in a serious, clear, and concise manner, suitable for frequent use in a business environment. Avoid humor, metaphors, or informal language. Focus on providing accurate, actionable, and direct insights.
+
     Context:
     {context}
 
     Question:
     {user_input}
 
-    Answer clearly and concisely.
+    Answer in a professional and businesslike tone.
     """
 
     response = client.chat.completions.create(
