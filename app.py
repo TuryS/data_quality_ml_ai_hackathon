@@ -18,6 +18,8 @@ from preprocessing import run_pipeline
 from metrics import kpi_summary, compute_quality_score, delay_by_carrier, kpis_per_carrier
 from model import load_model, predict_delay
 from ui_tags import build_color_map, inject_multiselect_tag_css
+from etd_deviation_analysis import add_deviation_predictions, render_etd_deviation_analysis
+import pandas as pd
 
 st.set_page_config(layout="wide")
 
@@ -48,7 +50,7 @@ def get_model():
 @st.cache_data
 def load_and_process_data():
     """Load and process data with MasterCarrier mapping."""
-    return run_pipeline("data/shipments_with_master_carrier.csv")
+    return run_pipeline("data/shipments_to_predict_etd.csv")
 
 # Load + prepare
 df = load_and_process_data()
@@ -126,18 +128,28 @@ fig.update_layout(
 st.plotly_chart(fig, use_container_width=True)
 
 # Model predictions
-model = get_model()
-df_f["predicted_delay_days"] = predict_delay(df_f, model)
+delay_model = get_model()
+df_f["predicted_delay_days"] = predict_delay(df_f, delay_model)
 
-fig_pred = px.scatter(
-    df_f,
-    x="delay_days",
-    y="predicted_delay_days",
-    color="MasterCarrier",
-    color_discrete_sequence=discrete_seq,
-    title="Actual vs Predicted Delay"
-)
-st.plotly_chart(fig_pred, use_container_width=True)
+# Add ETD deviation predictions using dedicated module
+df_f = add_deviation_predictions(df_f)
+
+# Show delay prediction scatter plot
+col1, col2 = st.columns(2)
+
+with col1:
+    fig_pred = px.scatter(
+        df_f,
+        x="delay_days",
+        y="predicted_delay_days",
+        color="MasterCarrier",
+        color_discrete_sequence=discrete_seq,
+        title="Actual vs Predicted Delay"
+    )
+    st.plotly_chart(fig_pred, use_container_width=True)
+
+# Render all ETD deviation analysis components
+render_etd_deviation_analysis(df_f, discrete_seq)
 
 # Chat
 st.subheader("Ask me about the data")

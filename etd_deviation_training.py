@@ -1,61 +1,19 @@
+"""
+ETD Deviation Model Training
+Separate module for training ETD deviation prediction model.
+"""
 import os
 import pickle
 from typing import List, Tuple
 
-import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import mean_absolute_error
 from sklearn.ensemble import RandomForestRegressor
-
-
-# -----------------------------
-# Schema alignment
-# -----------------------------
-def align_schema(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-
-    # Ensure datetime
-    for col in ["ETD", "ATD", "ETA", "ATA", "estimated_delivery", "actual_delivery"]:
-        if col in df.columns:
-            df[col] = pd.to_datetime(df[col], errors="coerce")
-
-    # Compute transit_time_days if missing
-    if "transit_time_days" not in df.columns:
-        if {"ATD", "ATA"}.issubset(df.columns):
-            df["transit_time_days"] = (df["ATA"] - df["ATD"]).dt.days
-
-    # Compute delay_days if missing
-    if "delay_days" not in df.columns:
-        if {"ETD", "ATD"}.issubset(df.columns):
-            df["delay_days"] = (df["ATD"] - df["ETD"]).dt.days
-
-    return df
-
-
-# -----------------------------
-# Derived features
-# -----------------------------
-def add_derived_features(df: pd.DataFrame) -> pd.DataFrame:
-    df = df.copy()
-
-    # lane feature
-    if {"POL", "POD"}.issubset(df.columns):
-        df["lane"] = df["POL"].astype(str) + "->" + df["POD"].astype(str)
-
-    # temporal features: preferred ETD
-    base = df["ETD"].where(df["ETD"].notna(), df["ATD"])
-    df["ETD_month"] = base.dt.month
-    df["ETD_weekday"] = base.dt.weekday
-
-    # vessel presence indicator
-    df["has_vessel"] = df["Vessel"].notna().astype(int)
-
-    return df
 
 
 # -----------------------------
@@ -63,14 +21,34 @@ def add_derived_features(df: pd.DataFrame) -> pd.DataFrame:
 # -----------------------------
 NUMERIC_FEATURES = [
     "doc_completeness",           # Document completeness (0-7)
-    "commodity_incomplete",       # HS code completeness (0-2)
+    "commodity_incomplete",       # HS code status: binary (1=incomplete, 0=complete)
     "port_congestion",            # Port congestion (0-20)
-    "carrier_confirmation_conf",  # Carrier confirmation (boolean/discrete)
+    "carrier_confirmation_conf",  # Carrier confirmation (0-1 continuous probability)
 ]
 
 CATEGORICAL_FEATURES = [
     # No categorical features - using only numeric data quality metrics
 ]
+
+
+# -----------------------------
+# Schema alignment
+# -----------------------------
+def align_schema(df: pd.DataFrame) -> pd.DataFrame:
+    """Ensure datetime columns and compute ETD_deviation_days."""
+    df = df.copy()
+
+    # Ensure datetime
+    for col in ["ETD", "ATD", "ETA", "ATA"]:
+        if col in df.columns:
+            df[col] = pd.to_datetime(df[col], errors="coerce")
+
+    # Compute ETD_deviation_days if missing
+    if "ETD_deviation_days" not in df.columns:
+        if {"ETD", "ATD"}.issubset(df.columns):
+            df["ETD_deviation_days"] = (df["ATD"] - df["ETD"]).dt.days
+
+    return df
 
 
 # -----------------------------
@@ -105,45 +83,43 @@ def remove_outliers(df: pd.DataFrame, target_col: str, max_abs_value: float = 10
 # -----------------------------
 # Prepare training data
 # -----------------------------
-def prepare_training_data(df: pd.DataFrame, remove_outliers_flag: bool = True) -> Tuple[pd.DataFrame, pd.Series, List[str], List[str]]:
+def prepare_deviation_training_data(
+    df: pd.DataFrame, 
+    remove_outliers_flag: bool = True
+) -> Tuple[pd.DataFrame, pd.Series, List[str], List[str]]:
+    """Prepare data for ETD deviation model training."""
     df = align_schema(df)
-    df = add_derived_features(df)
 
-    # drop missing target rows
-    df = df.dropna(subset=["delay_days"])
+    # Drop missing target rows
+    df = df.dropna(subset=["ETD_deviation_days"])
     
     # Remove outliers if requested
     if remove_outliers_flag:
-        df = remove_outliers(df, "delay_days", max_abs_value=100.0)
+        df = remove_outliers(df, "ETD_deviation_days", max_abs_value=100.0)
 
-    # keep only columns that exist
+    # Keep only columns that exist
     num_cols = [c for c in NUMERIC_FEATURES if c in df.columns]
     cat_cols = [c for c in CATEGORICAL_FEATURES if c in df.columns]
 
     X = df[num_cols + cat_cols]
-    y = df["delay_days"].astype(float)
+    y = df["ETD_deviation_days"].astype(float)
 
     return X, y, num_cols, cat_cols
 
 
 # -----------------------------
-# Pipeline
+# Build pipeline
 # -----------------------------
 def build_pipeline(num_cols, cat_cols):
+    """Build ML pipeline for ETD deviation prediction."""
     numeric_transformer = Pipeline([
         ("imputer", SimpleImputer(strategy="median")),
         ("scaler", StandardScaler())
     ])
 
-    categorical_transformer = Pipeline([
-        ("imputer", SimpleImputer(strategy="most_frequent")),
-        ("onehot", OneHotEncoder(handle_unknown="ignore"))
-    ])
-
     preprocessor = ColumnTransformer(
         transformers=[
             ("num", numeric_transformer, num_cols),
-            ("cat", categorical_transformer, cat_cols)
         ]
     )
 
@@ -160,17 +136,18 @@ def build_pipeline(num_cols, cat_cols):
 
 
 # -----------------------------
-# Train + save
+# Train + save deviation model
 # -----------------------------
-def train_and_save_model(
+def train_and_save_deviation_model(
     data_path="data/shipments_to_predict_etd.csv",
-    model_path="artifacts/delay_model.pkl"
+    model_path="artifacts/etd_deviation_model.pkl"
 ):
+    """Train and save ETD deviation prediction model."""
     os.makedirs(os.path.dirname(model_path), exist_ok=True)
 
     df = pd.read_csv(data_path)
 
-    X, y, num_cols, cat_cols = prepare_training_data(df)
+    X, y, num_cols, cat_cols = prepare_deviation_training_data(df)
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42
     )
@@ -181,14 +158,14 @@ def train_and_save_model(
     preds = pipeline.predict(X_test)
     mae = mean_absolute_error(y_test, preds)
 
-    print(f"MAE: {mae:.2f} days")
+    print(f"ETD Deviation Model MAE: {mae:.2f} days")
 
     with open(model_path, "wb") as f:
         pickle.dump(pipeline, f)
 
-    print(f"Saved model to {model_path}")
+    print(f"Saved deviation model to {model_path}")
 
 
 if __name__ == "__main__":
-    print("Training delay model...")
-    train_and_save_model()
+    print("Training ETD deviation model...")
+    train_and_save_deviation_model()
