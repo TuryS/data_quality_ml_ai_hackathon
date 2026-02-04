@@ -1,19 +1,28 @@
 import os
+import re
+import json
 import streamlit as st
 import plotly.express as px
 from openai import OpenAI
+from pathlib import Path
+
+key_path = Path(__file__).resolve().parent / "openai_key.txt"
+OPENAI_API_KEY = key_path.read_text(encoding="utf-8").strip()
+
 client = OpenAI(
-    api_key="REMOVED proj-OV3UkdEbvT9pYWszG7VzM_3rlxgaylBzEH5HRFsnFfRlIv2Fu1-1w3PDemkpWcK7a9HHFlVcyaT3BlbkFJt222ehlVCxa21gVbHqX-oDbD8h2mxMHy23a4C6QGPHFti8TuBLn1XT_jtWelnuBacjj8yYeX8A"
+    api_key=OPENAI_API_KEY
     )
 
 
 from preprocessing import load_data, add_derived_fields, basic_validation_flags
 from metrics import kpi_summary, compute_quality_score, delay_by_carrier, kpis_per_carrier
 from model import load_model, predict_delay
+from ui_tags import build_color_map, inject_multiselect_tag_css
 
 st.set_page_config(layout="wide")
 
 # Visual config
+
 def metric_card(title, value, color="#222", bg="#f8f9fa"):
     st.markdown(
         f"""
@@ -32,60 +41,58 @@ def metric_card(title, value, color="#222", bg="#f8f9fa"):
         unsafe_allow_html=True,
     )
 
-
-CARRIER_COLORS = {
-    "CMA CGM": "#d8345f",
-    "Hapag-Lloyd": "#f57f17",
-    "Maersk": "#1976d2",
-    "ONE": "#9c27b0",
-    "MSC": "#43a047"
-}
-
-
 @st.cache_resource
 def get_model():
     return load_model("artifacts/delay_model.pkl")
 
 # Load + prepare
-df = load_data("data/shipments.csv")
+df = load_data("data/shipments_with_master_carrier.csv")
 df = add_derived_fields(df)
 df = basic_validation_flags(df)
 
-# Filters
-st.sidebar.header("Filters")
 
+# Derive current carrier set from MasterCarrier
+all_carriers = sorted(df["MasterCarrier"].dropna().astype(str).unique().tolist())
 
-selected_carriers = st.multiselect(
-    "Carrier",
-    list(CARRIER_COLORS.keys()),
-    default=["CMA CGM", "Maersk"]
+# Optional per-brand overrides
+preferred_colors = {
+    # "Maersk": "#1976d2",
+}
+
+# Build capped color map (≤10 colors, cycle if more)
+CARRIER_COLORS = build_color_map(
+    all_carriers,
+    preferred=preferred_colors,
+    max_colors=10,       # hard cap
+    palette=None,        # use default PALETTE_10
+    cycle=True           # cycle beyond 10
 )
-chip_container = st.container()
-with chip_container:
-    for carrier in selected_carriers:
-        st.markdown(
-            f"""
-            <span style="
-                background:{CARRIER_COLORS[carrier]};
-                padding:4px 10px;
-                border-radius:12px;
-                margin-right:6px;
-                color:white;
-                font-size:13px;
-            ">{carrier}</span>
-            """,
-            unsafe_allow_html=True
-        )
+
+inject_multiselect_tag_css(st, CARRIER_COLORS)
 
 
-df_f = df[df["carrier"].isin(selected_carriers)]
+# Filters
+with st.sidebar:
+    st.header("Filters")
+    default_vals = [c for c in ["MSC", "Maersk"] if c in all_carriers] or None
+
+    selected_carriers = st.multiselect(
+        "Carrier",
+        all_carriers,
+        default=default_vals
+    )
+    st.markdown("<div style='height:10px'></div>", unsafe_allow_html=True)
+
+
+# Apply filter by MasterCarrier
+df_f = df[df["MasterCarrier"].isin(selected_carriers)].copy() if selected_carriers else df.copy()
 
 # KPIs
 kpis = kpi_summary(df_f)
 quality_score = compute_quality_score(df_f)
 
-c1, c2, c3, c4, c5 = st.columns(5)
-with c1: metric_card("Avg Transit (days)", kpis["avg_transit_time"])
+c1, c2, c3, c4, c5 = st.columns([1,1,1,1,1])
+with c1: metric_card("Avg Transit (days)", kpis["avg_transit_time_days"])
 with c2: metric_card("Avg Delay (days)", kpis["avg_delay_days"])
 with c3: metric_card("On Time %", kpis["on_time_ratio"])
 with c4: metric_card("Shipments", kpis["shipments"])
@@ -94,14 +101,20 @@ with c5: metric_card("Data Quality", quality_score)
 # Charts
 st.subheader("Performance")
 
+
+dbc = delay_by_carrier(df_f)  # columns: master_carrier, avg_delay, on_time_ratio, shipments
+
+discrete_seq = [CARRIER_COLORS[c] for c in all_carriers if c in CARRIER_COLORS]
+
 fig = px.bar(
-    delay_by_carrier(df_f),
-    x="carrier",
+    dbc,
+    x="master_carrier",
     y="avg_delay",
-    color="carrier",
-    color_discrete_map=CARRIER_COLORS,
+    color="master_carrier",
+    color_discrete_sequence=discrete_seq,
     title="Average Delay by Carrier"
 )
+
 fig.update_layout(
     showlegend=False,
     height=350,
@@ -117,7 +130,8 @@ fig_pred = px.scatter(
     df_f,
     x="delay_days",
     y="predicted_delay_days",
-    color="carrier",
+    color="MasterCarrier",
+    color_discrete_sequence=discrete_seq,
     title="Actual vs Predicted Delay"
 )
 st.plotly_chart(fig_pred, use_container_width=True)
@@ -137,7 +151,7 @@ if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
     
     context = {
-        "filters": {"carrier": carrier},
+        "filters": {"MasterCarrier": selected_carriers},
         "kpis_overall": kpis,                  # baseline
         "quality_overall": quality_score,      # baseline
         "kpis_by_carrier": kpis_per_carrier(df_f),  # detailed deviations
@@ -156,7 +170,7 @@ if user_input:
     """
 
     response = client.chat.completions.create(
-        model="gpt-4o-mini",
+        model="gpt-4o",
         messages=[
             {"role": "user", "content": prompt}
     ])

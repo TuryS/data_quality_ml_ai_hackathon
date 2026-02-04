@@ -7,8 +7,44 @@ import os
 def generate_synthetic_shipments(n=2000, seed=42):
     np.random.seed(seed)
 
-    carriers = ["Maersk", "MSC", "CMA CGM", "Hapag-Lloyd", "ONE"]
-    lanes = ["Asia-Europe", "Asia-US", "Europe-US"]
+    # Carrier-specific realism parameters
+    carrier_profiles = {
+        "Maersk": {
+            "base_transit": 19,
+            "transit_std": 3,
+            "reliability_mean": 0.90,
+            "congestion_sensitivity": 4,
+            "late_bias": (0, 4),   # early to mild late
+        },
+        "MSC": {
+            "base_transit": 22,
+            "transit_std": 4,
+            "reliability_mean": 0.80,
+            "congestion_sensitivity": 5,
+            "late_bias": (-1, 6),
+        },
+        "CMA CGM": {
+            "base_transit": 21,
+            "transit_std": 4.5,
+            "reliability_mean": 0.78,
+            "congestion_sensitivity": 6,
+            "late_bias": (0, 8),
+        },
+        "Hapag-Lloyd": {
+            "base_transit": 20,
+            "transit_std": 3.5,
+            "reliability_mean": 0.85,
+            "congestion_sensitivity": 5,
+            "late_bias": (-2, 5),
+        },
+        "ONE": {
+            "base_transit": 23,
+            "transit_std": 5,
+            "reliability_mean": 0.75,
+            "congestion_sensitivity": 7,
+            "late_bias": (1, 10),
+        },
+    }
 
     origin_ports = ["Shanghai", "Shenzhen", "Singapore", "Rotterdam", "Dubai"]
     destination_ports = ["LA", "New York", "Hamburg", "Felixstowe", "Jebel Ali"]
@@ -16,24 +52,43 @@ def generate_synthetic_shipments(n=2000, seed=42):
     rows = []
 
     for _ in range(n):
-        carrier = np.random.choice(carriers)
+        carrier = np.random.choice(list(carrier_profiles.keys()))
+        profile = carrier_profiles[carrier]
 
+        # realistic ATD
         atd = pd.Timestamp("2024-01-01") + pd.to_timedelta(
             np.random.randint(0, 365), unit="days"
         )
 
-        transit_time = np.random.normal(20, 5)  # base
+        # base transit + variability
+        transit_time = np.random.normal(
+            profile["base_transit"], profile["transit_std"]
+        )
+
+        # congestion (dynamic)
         congestion = np.random.uniform(0, 1)
-        reliability = np.random.uniform(0.6, 0.95)
 
-        adjusted_transit = transit_time + (congestion * 8) - ((reliability - 0.6) * 5)
+        # reliability affects early/late probability
+        reliability = np.clip(
+            np.random.normal(profile["reliability_mean"], 0.05), 0.5, 0.98
+        )
 
-        ata = atd + timedelta(days=max(1, int(adjusted_transit)))
+        # adjusted transit incorporating congestion and reliability
+        adjusted_transit = (
+            transit_time
+            + congestion * profile["congestion_sensitivity"]
+            - ((reliability - 0.5) * 4)
+        )
 
-        est_delivery = ata - timedelta(days=np.random.randint(0, 5))
-        act_delivery = ata + timedelta(
-            days=np.random.randint(-2, 8)
-        )  # can be early or late
+        transit_days = max(1, int(adjusted_transit))
+        ata = atd + timedelta(days=transit_days)
+
+        # estimated delivery = ATA - random 3–7 days
+        est_delivery = ata - timedelta(days=np.random.randint(3, 7))
+
+        # actual delivery early/late distribution per carrier
+        early, late = profile["late_bias"]
+        act_delivery = ata + timedelta(days=np.random.randint(early, late + 1))
 
         rows.append(
             {
