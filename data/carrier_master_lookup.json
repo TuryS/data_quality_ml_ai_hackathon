@@ -1,0 +1,2170 @@
+{
+  "hapag lloyd ( china ) ltd": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "anl container line pty.ltd.": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "branch of yang ming shipping (vietnam) co ltd in ha noi": {
+    "master_carrier": "Yang Ming",
+    "category": "Ocean"
+  },
+  "matson (inchcape shipping services pty. ltd)": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "airbridgecargo airlines llc": {
+    "master_carrier": "AirBridgeCargo",
+    "category": "Air"
+  },
+  "oocl (australia) pty.ltd.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "mediterranean shipping company pty ltd msc": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "thai airways international public company limited": {
+    "master_carrier": "Thai Cargo",
+    "category": "Air"
+  },
+  "cargoworld france": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "emirates airline": {
+    "master_carrier": "Emirates SkyCargo",
+    "category": "Air"
+  },
+  "hapag lloyd australia pty.ltd.": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "sri lankan airlines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "qantas airways limited": {
+    "master_carrier": "Qantas Freight",
+    "category": "Air"
+  },
+  "vanguard logistics services b.v.": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "malaysia airlines berhad": {
+    "master_carrier": "MASkargo",
+    "category": "Air"
+  },
+  "cma cgm and anl agencies": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "maersk australia pty ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "delta airlines cargo (e781)": {
+    "master_carrier": "Delta Cargo",
+    "category": "Air"
+  },
+  "kline australia": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "air new zealand": {
+    "master_carrier": "Air New Zealand Cargo",
+    "category": "Air"
+  },
+  "saco combimar spa": {
+    "master_carrier": "SACO Shipping",
+    "category": "Forwarder"
+  },
+  "american president lines (china) co. ltd. szx": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "singapore airlines cargo ltd": {
+    "master_carrier": "SIA Cargo",
+    "category": "Air"
+  },
+  "air france cargo": {
+    "master_carrier": "Air France-KLM Cargo",
+    "category": "Air"
+  },
+  "mediterranean shipping company usa": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "hawaiian airlines inc.": {
+    "master_carrier": "Hawaiian Air Cargo",
+    "category": "Air"
+  },
+  "british airways world cargo": {
+    "master_carrier": "IAG Cargo",
+    "category": "Air"
+  },
+  "air china italy contact": {
+    "master_carrier": "Air China Cargo",
+    "category": "Air"
+  },
+  "globelink international pty ltd": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "etihad airways": {
+    "master_carrier": "Etihad Cargo",
+    "category": "Air"
+  },
+  "cosco shipping lines (new zealand) limited": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "hapag lloyd ag": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "ecu line u.k. ltd": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "anl india": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "evergreen marine (hong kong) ltd": {
+    "master_carrier": "Evergreen",
+    "category": "Ocean"
+  },
+  "vanguard logistics services": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "nyk line (north america) inc": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "air china": {
+    "master_carrier": "Air China Cargo",
+    "category": "Air"
+  },
+  "hamburg sud hong kong limited": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "japan airlines": {
+    "master_carrier": "JAL Cargo",
+    "category": "Air"
+  },
+  "maersk line": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "latam airlines group s.a.": {
+    "master_carrier": "LATAM Cargo",
+    "category": "Air"
+  },
+  "car": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "ecu worldwide (belgium) n.v.": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "eva air": {
+    "master_carrier": "EVA Air Cargo",
+    "category": "Air"
+  },
+  "vanguard logistics services (canada) inc.": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "lufthansa cargo": {
+    "master_carrier": "Lufthansa Cargo",
+    "category": "Air"
+  },
+  "lufthansa jfk (e821)": {
+    "master_carrier": "Lufthansa Cargo",
+    "category": "Air"
+  },
+  "united airlines cargo accts payable": {
+    "master_carrier": "United Cargo",
+    "category": "Air"
+  },
+  "scandinavian airlines system": {
+    "master_carrier": "SAS Cargo",
+    "category": "Air"
+  },
+  "turkish airlines turk hava yollari a.o.": {
+    "master_carrier": "Turkish Cargo",
+    "category": "Air"
+  },
+  "china eastern airlines co ltd": {
+    "master_carrier": "China Eastern Cargo",
+    "category": "Air"
+  },
+  "combi line international spa": {
+    "master_carrier": "Combi Line International",
+    "category": "Forwarder"
+  },
+  "ocean network express (australia) pty ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "american airlines inc": {
+    "master_carrier": "American Airlines Cargo",
+    "category": "Air"
+  },
+  "hapag lloyd (india) pvt ltd (mum) (pune)": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "finnair oyj": {
+    "master_carrier": "Finnair Cargo",
+    "category": "Air"
+  },
+  "evergreen shipping agency (australia) pty ltd": {
+    "master_carrier": "Evergreen",
+    "category": "Ocean"
+  },
+  "iberia l.a.e. s.a. operadora": {
+    "master_carrier": "IAG Cargo",
+    "category": "Air"
+  },
+  "maersk (china) shipping co. ltd.": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "ecu worldwide italy srl": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "jet airways (india) ltd": {
+    "master_carrier": "Jet Airways Cargo",
+    "category": "Air"
+  },
+  "swiss world cargo international air lines ltd": {
+    "master_carrier": "Swiss WorldCargo",
+    "category": "Air"
+  },
+  "avianca aerovias nacionales de": {
+    "master_carrier": "Avianca Cargo",
+    "category": "Air"
+  },
+  "hapag lloyd (china) shipping ltd. shenzhen br": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "pacific international line (pil)": {
+    "master_carrier": "PIL",
+    "category": "Ocean"
+  },
+  "wallenius wilhelmsen logistics": {
+    "master_carrier": "RORO",
+    "category": "Ocean"
+  },
+  "mol (china) co. ltd shenzhen branch": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "apl italia agencies srl": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "air canada": {
+    "master_carrier": "Air Canada Cargo",
+    "category": "Air"
+  },
+  "qatar airways": {
+    "master_carrier": "Qatar Airways Cargo",
+    "category": "Air"
+  },
+  "air cargo trader": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "yang ming (australia) pty. ltd": {
+    "master_carrier": "Yang Ming",
+    "category": "Ocean"
+  },
+  "maersk hong kong ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "royal jordanian airline": {
+    "master_carrier": "Royal Jordanian Cargo",
+    "category": "Air"
+  },
+  "hapag lloyd(china) shipping ltd.": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "cma cgm agences france sas": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "maersk line a/s": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "hamburg sud australia pty ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "cosco container lines": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "european air transport": {
+    "master_carrier": "DHL Network Airlines",
+    "category": "Air"
+  },
+  "cma cgm & anl agencies (nz) ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "apl co pte ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "pt ocean network express indonesia": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "anl container line ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "teamglobal logistics pvt ltd": {
+    "master_carrier": "Teamglobal Logistics",
+    "category": "Forwarder"
+  },
+  "globelink trans(tianjin)international forwarding": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "hyundai merchant marine co. ltd.": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "air niugini pty limited global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "mitsui osk lines (australia) pty ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "ecu nordic a/s": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "nippon cargo": {
+    "master_carrier": "Nippon Cargo Airlines",
+    "category": "Air"
+  },
+  "eva airways corporation": {
+    "master_carrier": "EVA Air Cargo",
+    "category": "Air"
+  },
+  "vanguard logistics services belgium n.v.": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "cathay pacific airways ltd.": {
+    "master_carrier": "Cathay Cargo",
+    "category": "Air"
+  },
+  "msc (hong kong) limited shenzhen office": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "thai airways intl public company": {
+    "master_carrier": "Thai Cargo",
+    "category": "Air"
+  },
+  "wan hai lines ltd.": {
+    "master_carrier": "Wan Hai",
+    "category": "Ocean"
+  },
+  "vanguard logistics services france": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "cma cgm & anl (new zealand) ltd.": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "british airways p.l.c.": {
+    "master_carrier": "IAG Cargo",
+    "category": "Air"
+  },
+  "china southern airlines": {
+    "master_carrier": "China Southern Cargo",
+    "category": "Air"
+  },
+  "american president lines (china) co ltd. guangzhou": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "tap air portugal": {
+    "master_carrier": "TAP Air Cargo",
+    "category": "Air"
+  },
+  "klm lignes aeriennes royales neerlandaises": {
+    "master_carrier": "Air France-KLM Cargo",
+    "category": "Air"
+  },
+  "cosco shipping lines (xiamen) co .ltd.": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "mol (america) inc.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "k line (australia) pty limited": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "hainan airlines": {
+    "master_carrier": "Hainan Airlines Cargo",
+    "category": "Air"
+  },
+  "turkish airlines": {
+    "master_carrier": "Turkish Cargo",
+    "category": "Air"
+  },
+  "compania panamena de aviacion s.a.": {
+    "master_carrier": "Copa Cargo",
+    "category": "Air"
+  },
+  "one ocean network express": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "cargolux airlines int. s.a.": {
+    "master_carrier": "Cargolux",
+    "category": "Air"
+  },
+  "euro italian freight systems srl": {
+    "master_carrier": "Freight Systems",
+    "category": "Forwarder"
+  },
+  "everest cfs ltd": {
+    "master_carrier": "CFS/Depot (Everest)",
+    "category": "Forwarder"
+  },
+  "freight systems (india) pvt ltd": {
+    "master_carrier": "Freight Systems",
+    "category": "Forwarder"
+  },
+  "ags world transport": {
+    "master_carrier": "AGS World Transport",
+    "category": "Forwarder"
+  },
+  "federal express (hong kong) ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hamburg sud(china)ltd.": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "prime air service": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "cma cgm (cmdu)": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "hapag lloyd (america) inc.": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "singapore airlines limited": {
+    "master_carrier": "SIA Cargo",
+    "category": "Air"
+  },
+  "shipco transport inc": {
+    "master_carrier": "Shipco Transport",
+    "category": "Forwarder"
+  },
+  "silk way west airlines limited c/ o aviacargo": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "atlas air (o757)": {
+    "master_carrier": "Atlas Air",
+    "category": "Air"
+  },
+  "ecu australia pty ltd": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "vanguard logistics services s.a.": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "shenzhen lucky logistics ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "maersk espana slu": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "maersk benelux bv": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "hapag lloyd (italy) s.r.l.": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "allcargo logistics ltd (del)": {
+    "master_carrier": "Allcargo Logistics",
+    "category": "Forwarder"
+  },
+  "all nippon airlines": {
+    "master_carrier": "ANA Cargo",
+    "category": "Air"
+  },
+  "aero cargo international": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "northon lilly international": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "tam linhas aereas": {
+    "master_carrier": "LATAM Cargo",
+    "category": "Air"
+  },
+  "hamburg sud india pvt. ltd.": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "pacific international lines": {
+    "master_carrier": "PIL",
+    "category": "Ocean"
+  },
+  "oocl logistics(china)ltd shenzhen branch": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "klm royal dutch airlines": {
+    "master_carrier": "Air France-KLM Cargo",
+    "category": "Air"
+  },
+  "air india limited": {
+    "master_carrier": "Air India Cargo",
+    "category": "Air"
+  },
+  "cesare fremura s.r.l.u": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "delta air lines inc": {
+    "master_carrier": "Delta Cargo",
+    "category": "Air"
+  },
+  "maersk line india pvt ltd (maa)(tut)": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "bringer air cargo": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "anl (china) limited": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "transportes aereos bolivianos": {
+    "master_carrier": "TAB Cargo",
+    "category": "Air"
+  },
+  "china airlines ltd.": {
+    "master_carrier": "China Airlines Cargo",
+    "category": "Air"
+  },
+  "ocean network express pte. ltd.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "polar air cargo worldwide inc.": {
+    "master_carrier": "Polar Air Cargo",
+    "category": "Air"
+  },
+  "maersk singapore pte ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "hamburg sud nz ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "central shipping agency spa": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "zim australia": {
+    "master_carrier": "ZIM",
+    "category": "Ocean"
+  },
+  "sm line corporation": {
+    "master_carrier": "SM Line",
+    "category": "Ocean"
+  },
+  "air tahiti nui": {
+    "master_carrier": "Air Tahiti Nui (Cargo)",
+    "category": "Air"
+  },
+  "thai airways international public company ltd": {
+    "master_carrier": "Thai Cargo",
+    "category": "Air"
+  },
+  "hyundai merchant marine france sa": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "air mauritius": {
+    "master_carrier": "Air Mauritius Cargo",
+    "category": "Air"
+  },
+  "virgin atlantic airways": {
+    "master_carrier": "Virgin Atlantic Cargo",
+    "category": "Air"
+  },
+  "vanguard logistics services (italy) spa": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "hyundai ocean pioneer shipping agency co. ltd.": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "yang ming (america) corporation": {
+    "master_carrier": "Yang Ming",
+    "category": "Ocean"
+  },
+  "norwegian air uk ltd": {
+    "master_carrier": "Norwegian (Cargo)",
+    "category": "Air"
+  },
+  "acl atlantic container line ab": {
+    "master_carrier": "RORO",
+    "category": "Ocean"
+  },
+  "dole ocean cargo express": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "oocl orient overseas container line ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "cnc agencies (thailand) co. ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "fedex freight": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "korean airlines": {
+    "master_carrier": "Korean Air Cargo",
+    "category": "Air"
+  },
+  "air seychelles limited global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "egypt air": {
+    "master_carrier": "EgyptAir Cargo",
+    "category": "Air"
+  },
+  "sitc shipping agency (hk) co ltd": {
+    "master_carrier": "Intra-Asia Feeder",
+    "category": "Ocean"
+  },
+  "msc mediterranean shipping co ltd (mum) (pune)": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "shipco transport sdn bhd": {
+    "master_carrier": "Shipco Transport",
+    "category": "Forwarder"
+  },
+  "yang ming line (hk) ltd.": {
+    "master_carrier": "Yang Ming",
+    "category": "Ocean"
+  },
+  "msc geneve sa": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "vanguard logistics services ltd": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "zim shipping finance limited": {
+    "master_carrier": "ZIM",
+    "category": "Ocean"
+  },
+  "cargologicair ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "aerolineas argentinas": {
+    "master_carrier": "Aerolíneas Argentinas Cargo",
+    "category": "Air"
+  },
+  "hoegh autoliners as": {
+    "master_carrier": "RORO",
+    "category": "Ocean"
+  },
+  "orient overseas container line (oocl)": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "shipco transport (hk) ltd": {
+    "master_carrier": "Shipco Transport",
+    "category": "Forwarder"
+  },
+  "us lines llc": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "ssc consolidation nv": {
+    "master_carrier": "SSC Consolidation",
+    "category": "Forwarder"
+  },
+  "ecu worldwide (guangzhou) ltd qingdao branch": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "norwegian/msn air e159": {
+    "master_carrier": "Norwegian (Cargo)",
+    "category": "Air"
+  },
+  "oocl(usa) inc.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "k line singapore pte ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "globe air cargo system": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "saudi arabian service financier": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "delta airlines inc.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "mediterranean shipping company msc": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "ecu worldwide france": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "china cargo airlines": {
+    "master_carrier": "China Cargo Airlines",
+    "category": "Air"
+  },
+  "orient overseas container line ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "safair (proprietary) ltd. global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "absa aerolinhas brasileiras s.a.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "tcc logistics (g.feron e. de clebsattel)": {
+    "master_carrier": "TCC Logistics",
+    "category": "Forwarder"
+  },
+  "hamburg sud north america inc.": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "maersk france": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "msc mediterranean shipping co. s.a.": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "boltas gmbh": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "globelink int l freight forwarding (hk) ltd": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "cosco shipping container line agencies ltd.": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "cargolux italia s.p.a.": {
+    "master_carrier": "Cargolux",
+    "category": "Air"
+  },
+  "dalavia far east airways khabarovsk": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "polar air": {
+    "master_carrier": "Polar Air Cargo",
+    "category": "Air"
+  },
+  "hyundai merchant marine australia pty ltd": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "hapag lloyd pte. ltd.": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "azul linhas aereas brasileiras": {
+    "master_carrier": "Azul Cargo",
+    "category": "Air"
+  },
+  "mediterranean shipping co (uk) ltd": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "saco shipping gmbh": {
+    "master_carrier": "SACO Shipping",
+    "category": "Forwarder"
+  },
+  "south african airways": {
+    "master_carrier": "South African Airways Cargo",
+    "category": "Air"
+  },
+  "asiana airlines": {
+    "master_carrier": "Asiana Cargo",
+    "category": "Air"
+  },
+  "hapag lloyd (china) shipping ltd. ningbo branch": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "cathay pacific airways": {
+    "master_carrier": "Cathay Cargo",
+    "category": "Air"
+  },
+  "hapag lloyd (china) shipping ltd. qingdao branch": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "uasac (italy) srl": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hsichih container terminal": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "consignaciones maritimas y logistica sl (colmar)": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "oocl (taiwan) co. ltd.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "tampa cargo s.a.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "cma cgm (china)shipping co ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "shenzhen airlines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "anl (hong kong) limited": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "cma cgm holland bv": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "virgin atlantic airways limited": {
+    "master_carrier": "Virgin Atlantic Cargo",
+    "category": "Air"
+  },
+  "cosco shipping lines south china co. ltd": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "greencarrier consolidators ab": {
+    "master_carrier": "Greencarrier Consolidators",
+    "category": "Forwarder"
+  },
+  "airasia x sdn. bhd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "turkon america line inc.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "ecu worldwide (usa) inc.": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "lot polish airlines": {
+    "master_carrier": "LOT Cargo",
+    "category": "Air"
+  },
+  "hyundai merchant marine india pvt ltd (mum)(pune)": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "orient overseas container line (malaysia) sdn bhd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "korea marine transport company": {
+    "master_carrier": "Intra-Asia Feeder",
+    "category": "Ocean"
+  },
+  "latam airlines group dba lan airlines": {
+    "master_carrier": "LATAM Cargo",
+    "category": "Air"
+  },
+  "maritime service line this company is now closed": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "apl american president line": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "turkish airlines inc.": {
+    "master_carrier": "Turkish Cargo",
+    "category": "Air"
+  },
+  "globelink trans (tianjin) in tl forwarding co. ltd": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "synergy aviation ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "mediterranean shipping company (hk) limited": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "taca international airlines s.a. global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "evergreen international corp.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "ecu line nz ltd": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "maersk italia spa": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "hapag lloyd a/s": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "vanguard logistics services (hk) ltd": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "pacific international lines (pte) ltd": {
+    "master_carrier": "PIL",
+    "category": "Ocean"
+  },
+  "maersk line india pvt ltd (mum) (pune)": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "hamburg sud": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "vanguard logistics services inc.": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "tlpl shipping and logistics pvt ltd (kol)": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "atlantic container line": {
+    "master_carrier": "RORO",
+    "category": "Ocean"
+  },
+  "turkish airline(m371)": {
+    "master_carrier": "Turkish Cargo",
+    "category": "Air"
+  },
+  "karat joint stock company global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hanjin shipping (s) pte ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "ecu worldwide (hong kong) ltd.": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "apl securities s.a r.l.": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "hapag lloyd (uk) ltd": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "cosco container lines america inc.": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "air france": {
+    "master_carrier": "Air France-KLM Cargo",
+    "category": "Air"
+  },
+  "vanguard logistics services (guangzhou) limited": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "philippine airlines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "air berlin": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hapag lloyd (new zealand) ltd": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "msc belgium nv": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "grimaldi lines": {
+    "master_carrier": "RORO",
+    "category": "Ocean"
+  },
+  "ethiopian airlines": {
+    "master_carrier": "Ethiopian Cargo",
+    "category": "Air"
+  },
+  "mediterranean shipping company (m) sdn bhd": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "orient overseas container line": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "vanguard logistics services (s) pl": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "globelink uniexco s.l.": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "k line america inc.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "ssc consolidation b.v.": {
+    "master_carrier": "SSC Consolidation",
+    "category": "Forwarder"
+  },
+  "sealand": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "oriental logistics group ltd.(shenzhen)shanghai branch": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "maersk line ml freight collection": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "cma cgm ningbo": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "garuda indonesia": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hamburg sud nederland": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "silk way airlines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "tarros spa": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "mediterranean shipping company (shanghai) limited qingdao branch": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "oocl (italy) srl": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "nippon yusen kabushiki kaisha": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "hong kong dragon airlines limited": {
+    "master_carrier": "Cathay Cargo",
+    "category": "Air"
+  },
+  "maersk espa a sa": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "multimodal multi cargo leader": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "vanguard logistics services (shenzhen) ltd.": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "oocl (china) company limited qingdao branch": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "ecu line spain s.l.": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "mediterranean shipping co espana slu": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "cma cgm (hk) ltd.": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "maersk (china) shipping co. ltd. shanghai branch": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "oman aviation services co. (saog) global": {
+    "master_carrier": "Oman Air Cargo",
+    "category": "Air"
+  },
+  "ecu worldwide (guangzhou) limited": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "msc belgium": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "contino solutions aps": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "cma cgm asia shipping pte ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "maersk line netherlands bv": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "mediterranean shipping vigo": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "russ cargo groupe sas": {
+    "master_carrier": "SAS Cargo",
+    "category": "Air"
+  },
+  "mol (singapore) pte ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "hamburg sud singapore pte ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "chinatrans international ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "maersk malaysia sdn bhd on behalf of maersk line a/s": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "mitsui & co": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "ecu worldwid oceanbridge shipping ltd as agents": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "long sheng logistics co. ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "evergreen marine shenzhen": {
+    "master_carrier": "Evergreen",
+    "category": "Ocean"
+  },
+  "msc mediterranean shipping company": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "mediterranean shipping company (shanghai) ltd szx": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "cma cgm & anl (singapore) pte ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "c.a.l. cargo airlines ltd. global": {
+    "master_carrier": "CAL Cargo Airlines",
+    "category": "Air"
+  },
+  "nyk line shenzhen branch": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "norwegian": {
+    "master_carrier": "Norwegian (Cargo)",
+    "category": "Air"
+  },
+  "ifs international forwarding s.l.": {
+    "master_carrier": "IFS International",
+    "category": "Forwarder"
+  },
+  "amerijet international inc": {
+    "master_carrier": "Amerijet International",
+    "category": "Air"
+  },
+  "cosco container lines nederland bv": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "destinataires sous traitance liebherr": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "safmarine": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "maersk (china) shipping co. ltd. qingdao branch": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "airasia sdn bhd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "skylease cargo": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "cosco shipping lines (denmark) a/s": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "mediterranean shipping company sea (singapore) pl": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "freight links express (thailand) co. ltd.": {
+    "master_carrier": "Freight Links Express",
+    "category": "Forwarder"
+  },
+  "cargo gsa": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "oocl (denmark) a/s": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "ukraine international airlines global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "air europa lineas aereas s.a.": {
+    "master_carrier": "Air Europa Cargo",
+    "category": "Air"
+  },
+  "ecu worldwide (nederlands) bv": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "evergreen line master international shipping": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "apl (uk)": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "maersk": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "vanguard logistics services (zhuhai) limited tao": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "shanghai jinjiang shipping (group) co. ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hmm (hong kong) limited": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "k line (china) ltd.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "globelink ww india pvt ltd": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "mediterranean shipping company italia spa": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "cwt globelink pte ltd": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "t.s.lines ltd": {
+    "master_carrier": "Intra-Asia Feeder",
+    "category": "Ocean"
+  },
+  "ecu worldwide (malaysia) sdn. bhd.": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "cnan italia srl": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "hmm (sg) pte ltd": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "tlpl shipping and logistics pvt ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "maersk taiwan ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "apl france": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "pt vanguard logistics indonesia": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "zim integrated sh. services ltd co zim belgium nv": {
+    "master_carrier": "ZIM",
+    "category": "Ocean"
+  },
+  "msc france sas": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "weidong ferry co. ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "safmarine container lines n.v.": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "apl nol (m) sdn bhd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "turksh airlines cargo": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "evergreen shipping agency": {
+    "master_carrier": "Evergreen",
+    "category": "Ocean"
+  },
+  "mac nels container lines pvt ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "worldwide flight services": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "maersk line (thailand) ltd.": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "cma cgm iberica s.a.": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "swiss international airlines": {
+    "master_carrier": "Swiss WorldCargo",
+    "category": "Air"
+  },
+  "goodrich maritime pvt.ltd": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "emu lines pvt ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "k line (nederland) b.v.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "sisam agenti": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "yang ming marine transport corp.": {
+    "master_carrier": "Yang Ming",
+    "category": "Ocean"
+  },
+  "trans asian shipping services (p) ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "mol (hk) agency ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "nippon cargo airlines": {
+    "master_carrier": "Nippon Cargo Airlines",
+    "category": "Air"
+  },
+  "globelink (thailand) co. ltd.": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "dal deutsche afrika linien gmbh & co. kg": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hyundai merchant marine (belgium) nv": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "zim france": {
+    "master_carrier": "ZIM",
+    "category": "Ocean"
+  },
+  "k line ( hong kong ) ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "shipco transport (thailand) ltd.": {
+    "master_carrier": "Shipco Transport",
+    "category": "Forwarder"
+  },
+  "hapag lloyd": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "cosco shipping lines (france) sas": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "orient overseas container line(china) co ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "r hlig nederland b.v.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "xiamen airlines global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "msc": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "young carrier intl freight agency co ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "maersk a/s": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "transgroup": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "cargo lines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "sealand maersk asia pte ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "ecu worldwide italy s.r.l.": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "swiss world cargo": {
+    "master_carrier": "Swiss WorldCargo",
+    "category": "Air"
+  },
+  "hmm (belgium) nv": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "vietnam airlines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "greencarrier consolidators": {
+    "master_carrier": "Greencarrier Consolidators",
+    "category": "Forwarder"
+  },
+  "atlantis transportation services": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "japan airlines company limited": {
+    "master_carrier": "JAL Cargo",
+    "category": "Air"
+  },
+  "pil (india) private limited": {
+    "master_carrier": "PIL",
+    "category": "Ocean"
+  },
+  "globelink fallow international freight ltd": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "cnc freight services sdn bhd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hapag lloyd (india) pvt ltd (chennai & tuticorin)": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "wan hai international pte ltd": {
+    "master_carrier": "Wan Hai",
+    "category": "Ocean"
+  },
+  "maersk(china) shipping co. ltd.": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "anl singapore pte ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "apl limited": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "singapore airlines": {
+    "master_carrier": "SIA Cargo",
+    "category": "Air"
+  },
+  "britisch airways world cargo p.l.c.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "china shipping (australia) agency co. pty.ltd.": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "clb liner la havre": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "uasc": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "nyk group south asia pte. ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "oocl (vietnam) co. ltd oocll branch": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "cosco shipping lines italy": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "apl company limited": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "consol alliance": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "safmarine netherlands b.v. for acc & on behalf of": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "neos s.p.a.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "swiss worldcargo": {
+    "master_carrier": "Swiss WorldCargo",
+    "category": "Air"
+  },
+  "pt. globelink sea and air freight indonesia": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "carotrans cfs manukau": {
+    "master_carrier": "Carotrans",
+    "category": "Forwarder"
+  },
+  "lucky logistics group ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "joy success zhongshan logistics co. ltd .": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hamburg s d (china) ltd shenzhen branch": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hanjin shipping co ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "oocl (uk) ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "sealand europe a/s": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "cma cgm vietnam jsc": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "hamburg s d espa a": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hapag lloyd (thailand) ltd.": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "stx pan ocean shenzhen co. ltd": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "mercury air cargo": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "holland freight bridge b.v.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "k line espa a servicios maritimos s.a.": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "network airline services": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "kmtc (china) shanghai branch": {
+    "master_carrier": "Intra-Asia Feeder",
+    "category": "Ocean"
+  },
+  "globelink trans tianjin int l forwarding co. ltd.": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "heung a line co. ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "sinotrans guangdong co. ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hamburg sud france": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "vanguard logistics services (mum)(pune)": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "asian worldwide services (i) pvt.ltd.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "k line (belgium) nv": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "dhl aero expreso s.a. global": {
+    "master_carrier": "DHL Network Airlines",
+    "category": "Air"
+  },
+  "hapag lloyd spain s.l.": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "pacific direct lines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hoegh autoliners": {
+    "master_carrier": "RORO",
+    "category": "Ocean"
+  },
+  "evergreen shipping agency (america) corporation": {
+    "master_carrier": "Evergreen",
+    "category": "Ocean"
+  },
+  "yangming marine transport corporation": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "master international shipping agency co. ltd. (ningbo branch)": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "pt. samudera agencies indonesia": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "vanguard logistics services (thailand) co. ltd.": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "cargoport pty ltd t/a cp world": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hazel wrights logistics pte ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "corse air international": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "kmtc line (malaysia) sdn bhd": {
+    "master_carrier": "Intra-Asia Feeder",
+    "category": "Ocean"
+  },
+  "cosco shipping lines ( ningbo) co. ltd.": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "sinokor merchant marine co. ltd.": {
+    "master_carrier": "Intra-Asia Feeder",
+    "category": "Ocean"
+  },
+  "laparkan airways inc.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "united arab shipping company": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "sealand a maersk company": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "mediterranean shipping(thailand) co. ltd.": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "united arab agencies le havre": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "macs benelux b.v.": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "china northwest airlines global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "fair trade international": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "maersk logistics nz ltd": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "apl lines new zealand": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "pace": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "pt. perusahaan pelayaran nusantara panurjwan": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "brussels airlines n.v.": {
+    "master_carrier": "DHL Network Airlines",
+    "category": "Air"
+  },
+  "maersk espa a slu": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "rohlig deutschland gmbh & co. kg": {
+    "master_carrier": "Röhlig Logistics",
+    "category": "Forwarder"
+  },
+  "rcl feeder pte ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "shipco transport (guangzhou) ltd": {
+    "master_carrier": "Shipco Transport",
+    "category": "Forwarder"
+  },
+  "yang ming italy spa": {
+    "master_carrier": "Yang Ming",
+    "category": "Ocean"
+  },
+  "ecu line hong kong ltd": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "t.s. lines limited": {
+    "master_carrier": "Intra-Asia Feeder",
+    "category": "Ocean"
+  },
+  "evergreen shipping agency (europe) gmbh": {
+    "master_carrier": "Evergreen",
+    "category": "Ocean"
+  },
+  "interasia lines (m) sdn bhd": {
+    "master_carrier": "Intra-Asia Feeder",
+    "category": "Ocean"
+  },
+  "k line(china) ltd shenzhen branch": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "ecu worldwide (singapore) pte. ltd.": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "cma cgm agencies india pvt ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "kenya airways": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "american president lines ltd. taiwan branch": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "klm": {
+    "master_carrier": "Air France-KLM Cargo",
+    "category": "Air"
+  },
+  "vanguard logistics services(zhongshan) ltd.": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "m ller liner agencies b.v.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "transcarga itl airways": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "globelink uniexco": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "ecu worldwide shanghai": {
+    "master_carrier": "ECU Worldwide",
+    "category": "Forwarder"
+  },
+  "mediterranean ship co.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hamburg sud uk": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "united arab shipping agency company(shenzhen)limit": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "i.messina france sas": {
+    "master_carrier": "SAS Cargo",
+    "category": "Air"
+  },
+  "hmm agency (denmark) a/s": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "streck transporte gmbh": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "yang ming spain": {
+    "master_carrier": "Yang Ming",
+    "category": "Ocean"
+  },
+  "wow air": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "apl vietnam co. ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "thomas cook airlines ltd": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "pakistan int. airlines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "lufthansa cargo firms code s973": {
+    "master_carrier": "Lufthansa Cargo",
+    "category": "Air"
+  },
+  "gen air": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "hapag lloyd (malaysia) sdn bhd": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "evergreen shipping spain s.l.u": {
+    "master_carrier": "Evergreen",
+    "category": "Ocean"
+  },
+  "mol(china) co. ltd": {
+    "master_carrier": "ONE",
+    "category": "Ocean"
+  },
+  "apl (india) pvt ltd": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "hyundai merchant marine (s) pte ltd": {
+    "master_carrier": "HMM",
+    "category": "Ocean"
+  },
+  "transglory s.a.": {
+    "master_carrier": "Transglory",
+    "category": "Forwarder"
+  },
+  "turkish express line": {
+    "master_carrier": "Turkish Cargo",
+    "category": "Air"
+  },
+  "turk hava yollari linee aeree turche spa": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "oy air botnia ab global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "cma cgm uruguay s.a. sucursal paraguay": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "a. perez y cia. s.l.": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "air caledonie international": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "united arab shipping agency co. (hk) ltd": {
+    "master_carrier": "Agency/Local Agent",
+    "category": "Forwarder"
+  },
+  "hong kong airlines limited": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hanjin shipping": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "globelink trans (tianjin) international forwarding co. ltd ningbo branch": {
+    "master_carrier": "Globelink",
+    "category": "Forwarder"
+  },
+  "austrian airlines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "hapag lloyd aktiengesellschaft": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "mediterranean shipping co (uk)": {
+    "master_carrier": "MSC",
+    "category": "Ocean"
+  },
+  "fan cheng international transportation service": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "asl airlines belgium": {
+    "master_carrier": "DHL Network Airlines",
+    "category": "Air"
+  },
+  "hapag lloyd argentina s.r.l.": {
+    "master_carrier": "Hapag-Lloyd",
+    "category": "Ocean"
+  },
+  "grimaldi belgium nv": {
+    "master_carrier": "RORO",
+    "category": "Ocean"
+  },
+  "cma cgm": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "wallenius wilhelmsen logistics as": {
+    "master_carrier": "RORO",
+    "category": "Ocean"
+  },
+  "cma cgm sa": {
+    "master_carrier": "CMA CGM",
+    "category": "Ocean"
+  },
+  "challenge international": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "crs airlines representatives": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "maersk adria d.o.o.": {
+    "master_carrier": "Maersk",
+    "category": "Ocean"
+  },
+  "cargo marketing services limited": {
+    "master_carrier": "GSA/Handler",
+    "category": "Forwarder"
+  },
+  "vanguard logistics services limited shanghai": {
+    "master_carrier": "Vanguard Logistics",
+    "category": "Forwarder"
+  },
+  "cosco shenzhen international freight co. ltd": {
+    "master_carrier": "COSCO",
+    "category": "Ocean"
+  },
+  "shipco transport vietnam ltd": {
+    "master_carrier": "Shipco Transport",
+    "category": "Forwarder"
+  },
+  "ibc airways inc. global": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "virgin australia international airlines": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  },
+  "italia trasporto aereo s.p.a.": {
+    "master_carrier": "Unmapped",
+    "category": "Other"
+  }
+}
