@@ -1,4 +1,8 @@
 import pandas as pd
+import streamlit as st
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
 from typing import Dict, List, Tuple
 
 # -----------------------------
@@ -284,3 +288,96 @@ def data_completeness_report(df: pd.DataFrame, fields: List[str] = None) -> pd.D
         "completeness": [round(float(df[f].notnull().mean()), 2) for f in existing]
     }).sort_values("completeness", ascending=True)
     return comp
+
+def risk_by_carrier(df: pd.DataFrame, proba_col: str = "predicted_delay_risk") -> pd.DataFrame:
+    """
+    Computes per-carrier average risk (mean probability).
+    Requires df[proba_col] to exist.
+    """
+    df = _schema_aliases(df)
+    key = "master_carrier" if "master_carrier" in df.columns else ("MasterCarrier" if "MasterCarrier" in df.columns else "carrier")
+
+    if proba_col not in df.columns:
+        raise ValueError(f"Column '{proba_col}' not found. Ensure classifier predictions are added first.")
+
+    out = (
+        df.groupby(key, as_index=False)
+          .agg(
+              avg_risk=(proba_col, "mean"),
+              shipments=("delay_days", "count")
+          )
+          .sort_values("avg_risk", ascending=False)
+    )
+    out["avg_risk"] = out["avg_risk"].round(3)
+    return out
+
+def plot_data_quality_heatmap(df):
+    """
+    Create heatmap showing relationship between days before departure and data quality issues.
+    X-axis: Days before/after ETD (deviation buckets)
+    Y-axis: Data quality parameters
+    Cell values: Number of shipments affected
+    
+    Args:
+        df: DataFrame with shipment data and actual_etd_deviation
+    """
+    st.subheader("Data Quality Issues by ETD Deviation")
+    
+    # Create deviation buckets (days before/after estimated departure)
+    df_heatmap = df.copy()
+    
+    # Define buckets: negative = early, positive = late
+    bins = [-np.inf, -7, -4, -2, -1, 0, 1, 2, 4, 7, np.inf]
+    labels = ['≤-7 days', '-7 to -4', '-4 to -2', '-2 to -1', '-1 to 0', '0 to 1', '1 to 2', '2 to 4', '4 to 7', '≥7 days']
+    
+    df_heatmap['deviation_bucket'] = pd.cut(df_heatmap['delay_days'], bins=bins, labels=labels)
+    
+    # Parameters to analyze
+    parameters = {
+        'Document Completeness': 'doc_completeness',
+        'Commodity Incomplete': 'commodity_incomplete',
+        'Port Congestion': 'port_congestion',
+        'Carrier Confirmation': 'carrier_confirmation_conf'
+    }
+    
+    # Create matrix for heatmap
+    heatmap_data = []
+    
+    for param_name, param_col in parameters.items():
+        if param_col in df_heatmap.columns:
+            # Count shipments in each bucket with issues
+            if param_col == 'commodity_incomplete':
+                # Binary: 1 = incomplete (issue), 0 = complete (no issue)
+                counts = df_heatmap.groupby('deviation_bucket')[param_col].apply(lambda x: (x == 1).sum())
+            elif param_col == 'carrier_confirmation_conf':
+                # Lower values = less confident = issue
+                counts = df_heatmap.groupby('deviation_bucket')[param_col].apply(lambda x: (x < 0.5).sum())
+            else:
+                # Higher values = more issues (doc_completeness, port_congestion)
+                counts = df_heatmap.groupby('deviation_bucket')[param_col].apply(lambda x: (x > 0).sum())
+            heatmap_data.append(counts.values)
+    
+    # Create heatmap
+    fig = go.Figure(data=go.Heatmap(
+        z=heatmap_data,
+        x=labels,
+        y=list(parameters.keys()),
+        colorscale='YlOrRd',
+        text=heatmap_data,
+        texttemplate='%{text}',
+        textfont={"size": 10},
+        colorbar=dict(title="Shipments<br>Affected")
+    ))
+    
+    fig.update_layout(
+        title="Data Quality Issues vs. ETD Deviation (Days Before/After Estimated Departure)",
+        xaxis_title="Actual Deviation from ETD (days)",
+        yaxis_title="Data Quality Parameter",
+        height=400,
+        xaxis={'side': 'bottom'},
+    )
+    
+    st.plotly_chart(fig, use_container_width=True)
+    
+    st.caption("📊 Heatmap shows count of shipments with data quality issues for each deviation bucket. "
+              "Negative values = early departure, Positive = late departure")
